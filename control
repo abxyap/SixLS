@@ -1,7 +1,7 @@
 Package: xyz.skitty.sixls
 Name: Six (LS)
 Depends: mobilesubstrate, preferenceloader
-Version: 1.1
+Version: 1.1-1
 Architecture: iphoneos-arm
 Description: iOS 6 Style Lock Screen!
 Depiction: https://skitty.xyz/repo/depictions/xyz.skitty.sixls

@@ -35,16 +35,16 @@ static CSMainPageContentViewController *mainPageController;
 
 // Preference updates
 static void refreshPrefs() {
-	CFArrayRef keyList = CFPreferencesCopyKeyList(CFSTR("xyz.skitty.sixls"), kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
-	if(keyList) {
-		settings = (NSMutableDictionary *)CFBridgingRelease(CFPreferencesCopyMultiple(keyList, CFSTR("xyz.skitty.sixls"), kCFPreferencesCurrentUser, kCFPreferencesAnyHost));
-		CFRelease(keyList);
-	} else {
-		settings = nil;
-	}
-	if (!settings) {
+	// CFArrayRef keyList = CFPreferencesCopyKeyList(CFSTR("xyz.skitty.sixls"), kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+	// if(keyList) {
+	// 	settings = (NSMutableDictionary *)CFBridgingRelease(CFPreferencesCopyMultiple(keyList, CFSTR("xyz.skitty.sixls"), kCFPreferencesCurrentUser, kCFPreferencesAnyHost));
+	// 	CFRelease(keyList);
+	// } else {
+	// 	settings = nil;
+	// }
+	// if (!settings) {
 		settings = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/jb/var/mobile/Library/Preferences/xyz.skitty.sixls.plist"];
-	}
+	// }
 
 	enabled = [([settings objectForKey:@"enabled"] ?: @(YES)) boolValue];
 	disableHome = [([settings objectForKey:@"disableHome"] ?: @(NO)) boolValue];
