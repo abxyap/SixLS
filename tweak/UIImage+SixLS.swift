@@ -32,7 +32,7 @@ extension UIImage {
 
 	class func forSix(named name: String) -> UIImage? {
 #if TWEAK
-		return UIImage(contentsOfFile: "/Library/Application Support/Six/\(name).png")
+		return UIImage(contentsOfFile: "/var/jb/Library/Application Support/Six/\(name).png")
 #else
 		return UIImage(named: name)
 #endif

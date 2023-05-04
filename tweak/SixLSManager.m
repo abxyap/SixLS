@@ -5,6 +5,11 @@
 #import "Headers/UserNotificationsKit/NCNotificationAction.h"
 #import "Headers/UserNotificationsKit/NCNotificationActionRunner.h"
 
+@interface SBLockScreenManager ()
++ (id)sharedInstance;
+- (void)lockScreenViewControllerRequestsUnlock;
+@end
+
 @implementation SixLSManager
 
 + (instancetype)sharedInstance {

@@ -5,7 +5,7 @@
 @implementation SLSSettingsController
 
 - (NSBundle *)resourceBundle {
-	return [NSBundle bundleWithPath:@"/Library/PreferenceBundles/SixLS.bundle"];
+	return [NSBundle bundleWithPath:@"/var/jb/Library/PreferenceBundles/SixLS.bundle"];
 }
 
 @end
